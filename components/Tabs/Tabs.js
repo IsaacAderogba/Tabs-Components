@@ -19,6 +19,7 @@ class TabLink {
     this.element.addEventListener('click', () => {
       this.select();
     });
+    
 
   };
 
@@ -72,6 +73,29 @@ class TabItem {
 
 links = document.querySelectorAll('.tabs-link');
 
-links.forEach(link => {
-  new TabLink(link);
-});
+class Tabs {
+  constructor(tabLinks) {
+    this.tabLinks = tabLinks;
+    this.createLinks();
+
+    this.currentTab;
+    this.tabStruct = document.querySelector('.tabs');
+    this.listenForCurrentTab();
+  }
+
+  createLinks() {
+    this.tabLinks.forEach(link => {
+      new TabLink(link);
+    });
+  }
+
+  listenForCurrentTab() {
+    this.tabStruct.addEventListener('click', () => {
+      this.currentTab = document.querySelector('.tabs-item-selected');
+      console.log(this.currentTab);
+    });
+  }
+}
+
+const tab = new Tabs(links);
+
