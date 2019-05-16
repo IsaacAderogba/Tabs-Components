@@ -49,9 +49,9 @@ In this project, our design team has already built an HTML/CSS web page for us, 
 * [X] Create a Single `Tabs` component that creates all instances of `TabLink`. It will also hold the currently selected tab. 
   * [X] Add a `deselect` method to each the `TabItem` and `TabLink` classes. This will deselect that specific tab.
   * [X] Remove the code deselecting all `TabLink`s and `TabItem`s, only relying on the deselect method.
-  * `Tabs` should deselect the currently selected tab each time a new tab is selected.
-* Animations. (Use the animation library of your choice)
-  * Get the dropdown to slide in and out, rather than just appearing and disappearing
+  * [X] `Tabs` should deselect the currently selected tab each time a new tab is selected.
+* [X] Animations. (Use the animation library of your choice)
+  * [X] Get the dropdown to slide in and out, rather than just appearing and disappearing <- Partially complete, just did slide down.
   * Get the TabsItem text to fade in and out, or slide in and out.
   * Look through the LESS code and see where you can refactor using animations to achieve similar results.
 * Add styling using the LESS files.
