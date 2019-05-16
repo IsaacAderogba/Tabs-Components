@@ -24,6 +24,16 @@ class Dropdown {
       // Simple slide down animation
       TweenMax.from('.dropdown-content', 0.7, {top: -10, zIndex:-5});
       TweenMax.to('.dropdown-content', 0.7, {top:70});
+
+      // text fade in animation
+      let linksText = document.querySelectorAll('.dropdown-content a');
+      console.log(linksText);
+
+      linksText.forEach(linkText => {
+        console.log(linkText);
+        TweenMax.from(linkText, 1.2, {autoAlpha: 0});
+        TweenMax.to(linkText, 1.2, {autoAlpha: 1});
+      })
     
   }
 }
