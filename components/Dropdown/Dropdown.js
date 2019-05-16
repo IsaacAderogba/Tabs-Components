@@ -27,10 +27,8 @@ class Dropdown {
 
       // text fade in animation
       let linksText = document.querySelectorAll('.dropdown-content a');
-      console.log(linksText);
 
       linksText.forEach(linkText => {
-        console.log(linkText);
         TweenMax.from(linkText, 1.2, {autoAlpha: 0});
         TweenMax.to(linkText, 1.2, {autoAlpha: 1});
       })
@@ -41,3 +39,12 @@ class Dropdown {
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
+
+// animation for drop down button
+let dropdownButton = document.querySelector('.dropdown-button');
+dropdownButton.addEventListener('mouseenter', () => {
+  TweenMax.to('.dropdown-button', 0.3, {backgroundColor: '#be2530'});
+});
+dropdownButton.addEventListener('mouseleave', () => {
+  TweenMax.to('.dropdown-button', 0.3, {backgroundColor: '#931d25'});
+});
